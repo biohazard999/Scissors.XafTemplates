@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Manuel Grundner",
+  "classifications": [ "Common", "Console" ],
+  "identity": "Scissors.XafWinTemplate.CSharp",
+  "name": "expressApp Framework Winforms Application",
+  "shortName": "xafwin",
+  "tags": {
+    "language": "C#",
+    "type":"project"
+  },
+  "sourceName": "content"
+}

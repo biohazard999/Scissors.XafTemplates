@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.7" />
+  </PropertyGroup>
+
+</Project>
