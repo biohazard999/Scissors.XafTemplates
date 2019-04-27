@@ -27,6 +27,19 @@
           }
         ]
       }
+    },
+    "moduleRename": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "ValueAfterLastDot",
+      "fileRename": "ModuleName"
+    }
+  },
+  "forms": {
+    "ValueAfterLastDot": {
+      "identifier": "replace",
+      "pattern": "^.*\\.(?=[^\\.]+$)",
+      "replacement": ""
     }
   }
 }
