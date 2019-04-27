@@ -11,7 +11,7 @@ This project contains dotnet new templates for [DevExpress](https://www.devexpre
 
 ## Samples & Demos
 
-Currently the templates are rather basic, so usage is a little bit limited, but they work for us right now. Feel free to file an [issue]() or send an [pull-request]().
+Currently the templates are rather basic, so usage is a little bit limited, but they work for us right now. Feel free to file an [issue](https://github.com/biohazard999/Scissors.XafTemplates/issues) or send an [pull-request](https://github.com/biohazard999/Scissors.XafTemplates/pulls).
 
 See [demos](./demos/README.md) for more details
 
