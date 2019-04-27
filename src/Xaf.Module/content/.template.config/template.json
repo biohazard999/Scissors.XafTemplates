@@ -1,13 +1,13 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Manuel Grundner",
-  "classifications": [ "Common", "Console" ],
+  "classifications": ["Common", "Console"],
   "identity": "Scissors.XafModuleTemplate.CSharp",
   "name": "expressApp Framework Empty Module",
   "shortName": "xafmodule",
   "tags": {
     "language": "C#",
-    "type":"project"
+    "type": "project"
   },
   "sourceName": "Scissors.Modules.ModuleName",
   "preferNameDirectory": true,
@@ -18,10 +18,12 @@
       "datatype": "text",
       "replaces": "ModuleName",
       "parameters": {
+        "source": "name",
+        "action": "replace",
         "steps": [
           {
-            "regex": "[^\\.]([^.]*)$",
-            "replacement": "[ModuleName]"
+            "regex": ".*\\.",
+            "replacement": ""
           }
         ]
       }
