@@ -52,7 +52,6 @@ u:d                           Shorthand for Uninstall:Debug
 i:d                           Shorthand for Install:Debug
 
 Default                       Runs the default target Pack
-
 ```
 
 > Use `tools\Cake\Cake.exe --showdescription` for the actual build tasks
