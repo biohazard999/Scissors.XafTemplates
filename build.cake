@@ -2,10 +2,37 @@
 
 var target = string.IsNullOrEmpty(Argument("target", "Default")) ? "Default" : Argument("target", "Default");
 
+var artifactsDirectory = "./artifacts";
+
+var nuspecs = new []
+{
+    "./src/Xaf.Module/Scissors.XafModuleTemplate.CSharp.nuspec",
+    "./src/Xaf.Module.Win/Scissors.XafModuleTemplate.Win.CSharp.nuspec"
+};
+
+Task("Clean")
+    .Does(() => DeleteDirectory(artifactsDirectory, new DeleteDirectorySettings
+    {
+        Force = true,
+        Recursive = true
+    }));
+
 Task("Pack")
+    .IsDependentOn("Clean")
     .Does(() =>
     {
-        Information("Task is running");
+        var gitVersion = GitVersion(new GitVersionSettings
+        {
+            UpdateAssemblyInfo = false
+        });
+        foreach(var nuspec in nuspecs)
+        {
+            NuGetPack(nuspec, new NuGetPackSettings
+            {
+                OutputDirectory = artifactsDirectory,
+                Version = gitVersion.NuGetVersionV2
+            });
+        }
     });
 
 Task("Default")
