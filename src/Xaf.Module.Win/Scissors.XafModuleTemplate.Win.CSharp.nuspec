@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Scissors.XafModuleTemplate.Win.CSharp</id>
+    <version>0.1.0</version>
+    <description>
+      Creates an empty expressApp winforms module.
+    </description>
+    <authors>Manuel Grundner</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+</package>

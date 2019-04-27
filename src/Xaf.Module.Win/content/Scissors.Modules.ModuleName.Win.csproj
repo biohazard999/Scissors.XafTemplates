@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.7" />
   </ItemGroup>
 
 </Project>
