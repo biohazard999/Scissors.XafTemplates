@@ -28,3 +28,28 @@ dotnet new xaf-module -o Base -n Scissors.Modules.TokenEditor
 ```cmd
 dotnet new xaf-win-module -o Win -n Scissors.Modules.TokenEditor
 ```
+
+## Building & Development
+
+For local development, make sure to uninstall all templates using `build Uninstall:Debug` after that, you can use `build Install:Debug` and work on the templates.
+
+```txt
+Task                          Description
+================================================================================
+Clean                         Cleans build artifacts
+Pack                          Builds the templates into nuget packages using SemVer
+
+Uninstall                     Uninstalls the templates via nuget
+Install                       Installs the locally created templates via nuget
+
+Uninstall:Debug               Uninstalls the debug version (folder) of the templates
+Install:Debug                 Installs the debug version (folder) of the templates
+
+u                             Shorthand for Uninstall
+i                             Shorthand for Install
+u:d                           Shorthand for Uninstall:Debug
+i:d                           Shorthand for Install:Debug
+
+Default                       Runs the default target Pack
+
+```

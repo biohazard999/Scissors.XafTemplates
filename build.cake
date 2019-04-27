@@ -11,6 +11,7 @@ var nuspecs = new []
 };
 
 Task("Clean")
+    .Description("Cleans build artifacts")
     .Does(() => 
     {
         if(DirectoryExists(artifactsDirectory)) DeleteDirectory(artifactsDirectory, new DeleteDirectorySettings
@@ -21,6 +22,7 @@ Task("Clean")
     });
 
 Task("Pack")
+    .Description("Builds the templates into nuget packages using SemVer")
     .IsDependentOn("Clean")
     .Does(() =>
     {
@@ -51,10 +53,6 @@ Task("Uninstall")
         }
     });
 
-Task("u")
-    .Description("Shorthand for Uninstall")
-    .IsDependentOn("Uninstall");
-
 Task("Install")
     .Description("Installs the locally created templates via nuget")
     .IsDependentOn("Uninstall")
@@ -70,10 +68,6 @@ Task("Install")
         }
     });
 
-Task("i")
-    .Description("Shorthand for Install")
-    .IsDependentOn("Install");
-
 Task("Uninstall:Debug")
     .Description("Uninstalls the debug version (folder) of the templates")
     .IsDependentOn("Uninstall")
@@ -86,10 +80,6 @@ Task("Uninstall:Debug")
             DotNetCoreTool($"new -u {dir}");
         }
     });
-
-Task("u:d")
-    .Description("Shorthand for Uninstall:Debug")
-    .IsDependentOn("Uninstall:Debug");
 
 Task("Install:Debug")
     .Description("Installs the debug version (folder) of the templates")
@@ -105,9 +95,25 @@ Task("Install:Debug")
         }
     });
 
+#region ShortHands
+
+Task("u")
+    .Description("Shorthand for Uninstall")
+    .IsDependentOn("Uninstall");
+
+Task("i")
+    .Description("Shorthand for Install")
+    .IsDependentOn("Install");
+
+Task("u:d")
+    .Description("Shorthand for Uninstall:Debug")
+    .IsDependentOn("Uninstall:Debug");
+
 Task("i:d")
     .Description("Shorthand for Install:Debug")
     .IsDependentOn("Install:Debug");
+
+#endregion
 
 Task("Default")
     .Description("Runs the default target Pack")

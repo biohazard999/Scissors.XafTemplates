@@ -5,6 +5,7 @@
 tools/
 build.ps1
 artifacts/
+*.temp.nuspec
 
 # User-specific files
 *.suo
