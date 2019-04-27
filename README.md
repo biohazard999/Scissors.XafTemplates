@@ -47,6 +47,7 @@ Install:Debug                 Installs the debug version (folder) of the templat
 
 u                             Shorthand for Uninstall
 i                             Shorthand for Install
+
 u:d                           Shorthand for Uninstall:Debug
 i:d                           Shorthand for Install:Debug
 
