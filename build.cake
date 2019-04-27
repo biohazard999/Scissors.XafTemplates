@@ -25,6 +25,7 @@ Task("Pack")
         {
             UpdateAssemblyInfo = false
         });
+        
         foreach(var nuspec in nuspecs)
         {
             NuGetPack(nuspec, new NuGetPackSettings
