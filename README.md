@@ -6,6 +6,19 @@ This project contains dotnet new templates for [DevExpress](https://www.devexpre
 
 ## Installation
 
+### All templates
+
+```cmd
+dotnet new -i Scissors.XafTemplates
+```
+
+### Individual templates
+
+```cmd
+dotnet new -i Scissors.XafTemplates.Module.CSharp
+dotnet new -i Scissors.XafTemplates.Module.Win.CSharp
+```
+
 ## Available templates
 
 - `dotnet new xaf-module`: Creates an empty base module
