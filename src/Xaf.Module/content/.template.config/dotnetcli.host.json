@@ -3,6 +3,14 @@
     "skipRestore": {
       "longName": "no-restore",
       "shortName": ""
+    },
+    "target-framework": {
+      "longName": "target-framework",
+      "shortName": "tf"
+    },
+    "dx-version": {
+      "longName": "dx-version",
+      "shortName": "dx"
     }
   }
 }
