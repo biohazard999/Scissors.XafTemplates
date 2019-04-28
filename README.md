@@ -92,8 +92,8 @@ To perform a change switch to a new branch (from `master`):
 
 Start you work. Commit often and in small chunks by running through the wizard.
 
-`git add .` or stage your changes by hand.
-`npm run cz`
-`git push`
+- `git add .` or stage your changes by hand.
+- `npm run cz`
+- `git push`
 
 Push your work and perform a [pull-request](https://github.com/biohazard999/Scissors.XafTemplates/pulls).
