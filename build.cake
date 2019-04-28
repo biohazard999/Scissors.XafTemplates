@@ -20,6 +20,7 @@ Task("Clean")
             Force = true,
             Recursive = true
         });
+        DeleteFiles("./src/**/*.temp.nuspec");
     });
 
 Task("Pack")
