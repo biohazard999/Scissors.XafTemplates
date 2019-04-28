@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Scissors.XafTemplates</id>
+    <version>0.1.0</version>
+    <description>
+      Metapackage for all Scissors.XafTemplates.*
+    </description>
+    <authors>Manuel Grundner</authors>    
+    <dependencies>
+      <dependency id="Scissors.XafTemplates.Module.CSharp" version="$version$" />
+      <dependency id="Scissors.XafTemplates.Module.Win.CSharp" version="$version$" />
+    </dependencies>
+  </metadata>
+</package>

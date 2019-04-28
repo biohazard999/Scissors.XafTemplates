@@ -7,7 +7,8 @@ var artifactsDirectory = "./artifacts";
 var nuspecs = new []
 {
     "./src/Xaf.Module/Scissors.XafTemplates.Module.CSharp.nuspec",
-    "./src/Xaf.Module.Win/Scissors.XafTemplates.Module.Win.CSharp.nuspec"
+    "./src/Xaf.Module.Win/Scissors.XafTemplates.Module.Win.CSharp.nuspec",
+    "./src/Xaf/Scissors.XafTemplates.nuspec",
 };
 
 Task("Clean")
