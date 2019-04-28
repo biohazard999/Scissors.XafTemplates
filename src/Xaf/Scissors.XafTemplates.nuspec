@@ -10,6 +10,7 @@
     <dependencies>
       <dependency id="Scissors.XafTemplates.Module.CSharp" version="$version$" />
       <dependency id="Scissors.XafTemplates.Module.Win.CSharp" version="$version$" />
+      <dependency id="Scissors.XafTemplates.Win.CSharp" version="$version$" />
     </dependencies>
   </metadata>
 </package>
