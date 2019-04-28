@@ -1,0 +1,41 @@
+{
+  "name": "scissors.xaftemplates",
+  "version": "0.1.0",
+  "description": "This project contains dotnet new templates for DevExpress expressAppFramework and Scissors",
+  "main": "index.js",
+  "scripts": {
+    "cz": "npx git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biohazard999/Scissors.XafTemplates.git"
+  },
+  "keywords": [
+    "XAF",
+    "DevExpress",
+    "Scissors"
+  ],
+  "author": "Manuel Grundner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/biohazard999/Scissors.XafTemplates/issues"
+  },
+  "homepage": "https://github.com/biohazard999/Scissors.XafTemplates#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^2.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
