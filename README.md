@@ -1,6 +1,6 @@
 # Scissors.XafTemplates
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Build status](https://mgrundner.visualstudio.com/Scissors/_apis/build/status/Scissors-ASP.NET%20Core-CI)](https://mgrundner.visualstudio.com/Scissors/_build/latest?definitionId=52) ![Nuget](https://img.shields.io/nuget/v/Scissors.XafTemplates.svg) ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Scissors.XafTemplates.svg)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Build status](https://mgrundner.visualstudio.com/Scissors/_apis/build/status/Scissors-ASP.NET%20Core-CI)](https://mgrundner.visualstudio.com/Scissors/_build/latest?definitionId=52) [![NuGet Badge](https://buildstats.info/nuget/Scissors.XafTemplates)](https://www.nuget.org/packages/Scissors.XafTemplates/)
 
 This project contains dotnet new templates for [DevExpress](https://www.devexpress.com/) [expressAppFramework](https://www.devexpress.com/products/net/application_framework/) and [Scissors](https://github.com/biohazard999/Scissors.FeatureCenter).
 
