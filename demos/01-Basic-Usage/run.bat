@@ -1,8 +1,8 @@
 @echo OFF
 
 REM Recreate the bin direcoty (only for the demo, so .git does not get polluted)
-IF EXIST bin rmdir /S /Q bin && mkdir bin && pushd bin
-
+IF EXIST bin rmdir /S /Q bin
+mkdir bin && pushd bin
 
 REM ================= 
 REM Usage starts here 
