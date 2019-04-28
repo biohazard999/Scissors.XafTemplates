@@ -32,6 +32,8 @@ Task("Pack")
         {
             UpdateAssemblyInfo = false
         });
+        
+        Information($"##vso[build.updatebuildnumber]{gitVersion.NuGetVersionV2}");
 
         foreach(var nuspec in nuspecs)
         {
