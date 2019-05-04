@@ -1,5 +1,7 @@
+using System;
+using DevExpress.ExpressApp.Win;
 
-namespace Scissors.Win.Extentions
+namespace Scissors.ModuleName.Win.Extentions
 {
     public static class ApplicationExtentions
     {

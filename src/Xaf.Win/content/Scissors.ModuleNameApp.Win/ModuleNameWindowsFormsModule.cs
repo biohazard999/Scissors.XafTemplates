@@ -1,18 +1,19 @@
 ﻿using System;
 using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win.SystemModule;
-using Scissors.Modules.ModuleName;
+using Scissors.ModuleNameApp;
 
-namespace Scissors.Modules.ModuleName.Win
+namespace Scissors.ModuleNameApp.Win
 {
-    public class ModuleNameWindowsFormsModule : ModuleBase
+    public class ModuleNameAppWindowsFormsModule : ModuleBase
     {
         protected override ModuleTypeList GetRequiredModuleTypesCore() => new ModuleTypeList(new[]
         {
             typeof(SystemModule),
             typeof(SystemWindowsFormsModule),
-            typeof(ModuleNameModule)
+            typeof(ModuleNameAppModule)
         });
     }
 }

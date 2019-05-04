@@ -2,9 +2,9 @@
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.SystemModule;
 
-namespace Scissors.Modules.ModuleName
+namespace Scissors.ModuleNameApp
 {
-    public class ModuleNameModule : ModuleBase
+    public class ModuleNameAppModule : ModuleBase
     {
         protected override ModuleTypeList GetRequiredModuleTypesCore() => new ModuleTypeList(new[]
         {

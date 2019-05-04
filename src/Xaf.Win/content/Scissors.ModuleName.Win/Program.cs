@@ -3,13 +3,13 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.ExpressApp;
-using DevExpress.ExpressApp.Security;
-using DevExpress.ExpressApp.Validation;
-using DevExpress.ExpressApp.Validation.Win;
+using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Xpo;
-using DevExpress.Persistent.Base;
+using Scissors.ModuleName.Win.Extentions;
+using Scissors.ModuleNameApp;
+using Scissors.ModuleNameApp.Win;
 
-namespace Scissors.Win
+namespace Scissors.ModuleName.Win
 {
     class Program
     {
@@ -60,29 +60,40 @@ namespace Scissors.Win
             DevExpress.Persistent.Base.PasswordCryptographer.EnableRfc2898 = true;
             DevExpress.Persistent.Base.PasswordCryptographer.SupportLegacySha512 = false;
             DevExpress.ExpressApp.Utils.ImageLoader.Instance.UseSvgImages = true;
+
+            DevExpress.ExpressApp.Model.ModelXmlReader.UseXmlReader = true;
+            DevExpress.ExpressApp.Model.Core.ModelNode.UseDefaultValuesCache = true;
+            DevExpress.ExpressApp.Core.ControllersManager.UseParallelBatchControllerCreation = true;
+            DevExpress.ExpressApp.ApplicationModulesManager.UseParallelTypesCollector = true;
+            DevExpress.ExpressApp.ApplicationModulesManager.UseStaticCache = true;
+            DevExpress.Persistent.Base.ReflectionHelper.UseAssemblyResolutionCache = true;
         }
 
         protected virtual WinApplication CreateApplication()
         {
-            var app = new Empty191XafAppWindowsFormsApplication();
+            var app = new ModuleNameWindowsFormsApplication();
             using (app.Initialize())
             {
-                app.ApplicationName = "Empty191XafApp",
-                app.LinkNewObjectToParentImmediately = false,
-                app.OptimizedControllersCreation = true,
-                app.UseLightStyle = true,
-			    app.ExecuteStartupLogicBeforeClosingLogonWindow = true,
+                app.ApplicationName = "Scissors";
+                app.OptimizedControllersCreation = true;
+                app.RunSetupInNewThread = true;
+
+                app.UseOldTemplates = false;
+                app.UseLightStyle = true;
+
+                app.LinkNewObjectToParentImmediately = false;
+                app.ExecuteStartupLogicBeforeClosingLogonWindow = true;
                 app.CheckCompatibilityType
                     = System.Diagnostics.Debugger.IsAttached
                     ? DatabaseUpdateMode.UpdateDatabaseAlways
-                    : DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema,
-                app.UseOldTemplates = false,
+                    : DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
+
                 app.Modules.AddRange(new[]
                 {
                     new SystemModule(),
                     new SystemWindowsFormsModule(),
-                    new Empty191XafAppModule(),
-                    new Empty191XafAppWindowsFormsModule(),
+                    new ModuleNameAppModule(),
+                    new ModuleNameAppWindowsFormsModule(),
                 });
             }
 

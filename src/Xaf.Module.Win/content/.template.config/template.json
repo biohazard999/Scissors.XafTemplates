@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Manuel Grundner",
   "classifications": ["Common", "Console"],
-  "identity": "Scissors.XafModuleTemplate.WindowsForms.CSharp",
+  "identity": "Scissors.XafModuleTemplate.Win.CSharp",
   "name": "expressApp Framework Empty WindowsForms Module",
   "shortName": "xaf-win-module",
   "tags": {
