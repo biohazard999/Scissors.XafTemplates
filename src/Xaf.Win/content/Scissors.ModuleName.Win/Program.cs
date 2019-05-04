@@ -19,6 +19,7 @@ namespace Scissors.ModuleName.Win
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             new Program().Run(args);
@@ -93,6 +94,8 @@ namespace Scissors.ModuleName.Win
                     = System.Diagnostics.Debugger.IsAttached
                     ? DatabaseUpdateMode.UpdateDatabaseAlways
                     : DatabaseUpdateMode.UpdateOldDatabase;
+
+                app.ConnectionString = GetConnectionString();
 
                 app.Modules.AddRange(new ModuleBase[]
                 {

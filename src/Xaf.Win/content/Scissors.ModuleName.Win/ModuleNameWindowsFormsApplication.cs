@@ -41,25 +41,31 @@ namespace Scissors.ModuleName.Win
 #endif
 //+:cnd:noEmit
 #endif
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                e.Updater.Update();
-                e.Handled = true;
-            }
-            else
-            {
-                var message = "The application cannot connect to the specified database, " +
-                    "because the database doesn't exist, its version is older " +
-                    "than that of the application or its schema does not match " +
-                    "the ORM data model structure. To avoid this error, use one " +
-                    "of the solutions from the https://www.devexpress.com/kb=T367835 KB Article.";
+//-:cnd:noEmit
+#if DEBUG
+//+:cnd:noEmit
+            e.Updater.Update();
+            e.Handled = true;
+//-:cnd:noEmit
+#endif
+//+:cnd:noEmit
+//-:cnd:noEmit
+#if RELEASE
+//+:cnd:noEmit
+            var message = "The application cannot connect to the specified database, " +
+                "because the database doesn't exist, its version is older " +
+                "than that of the application or its schema does not match " +
+                "the ORM data model structure. To avoid this error, use one " +
+                "of the solutions from the https://www.devexpress.com/kb=T367835 KB Article.";
 
-                if (e.CompatibilityError != null && e.CompatibilityError.Exception != null)
-                {
-                    message += "\r\n\r\nInner exception: " + e.CompatibilityError.Exception.Message;
-                }
-                throw new InvalidOperationException(message);
+            if (e.CompatibilityError != null && e.CompatibilityError.Exception != null)
+            {
+                message += "\r\n\r\nInner exception: " + e.CompatibilityError.Exception.Message;
             }
+            throw new InvalidOperationException(message);
+//-:cnd:noEmit
+#endif
+//+:cnd:noEmit
         }
     }
 }
