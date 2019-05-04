@@ -112,11 +112,15 @@ namespace Scissors.ModuleName.Win
             {
                 return ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             }
+#if (UseEasyTest)
+//-:cnd:noEmit
 #if EASYTEST
             if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null)
             {
                 return ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
             }
+//+:cnd:noEmit
+#endif
 #endif
             InMemoryDataStoreProvider.Register();
             return InMemoryDataStoreProvider.ConnectionString;

@@ -51,6 +51,11 @@
       "datatype": "text",
       "defaultValue": "19.1.2",
       "replaces": "18.2.7"
+    },
+    "UseEasyTest": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "false"
     }
   },
   "forms": {

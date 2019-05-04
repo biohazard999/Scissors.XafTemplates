@@ -32,10 +32,15 @@ namespace Scissors.ModuleName.Win
 
         private void ModuleNameWindowsFormsApplication_DatabaseVersionMismatch(object sender, DatabaseVersionMismatchEventArgs e)
         {
+#if (UseEasyTest)
+//-:cnd:noEmit
 #if EASYTEST
-            e.Updater.Update();
-            e.Handled = true;
-#else
+                e.Updater.Update();
+                e.Handled = true;
+                return;
+#endif
+//+:cnd:noEmit
+#endif
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 e.Updater.Update();
@@ -55,7 +60,6 @@ namespace Scissors.ModuleName.Win
                 }
                 throw new InvalidOperationException(message);
             }
-#endif
         }
     }
 }
