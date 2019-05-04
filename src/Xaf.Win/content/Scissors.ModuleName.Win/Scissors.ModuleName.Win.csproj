@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net462</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Scissors.ModuleName.App\Scissors.ModuleName.App.csproj" />
+    <ProjectReference Include="..\Scissors.ModuleName.App.Win\Scissors.ModuleName.App.Win.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" Private="False" />    
+    <Reference Include="System.Configuration" Private="False" />    
+  </ItemGroup>
+
+</Project>

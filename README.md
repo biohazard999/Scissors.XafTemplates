@@ -17,12 +17,14 @@ dotnet new -i Scissors.XafTemplates
 ```cmd
 dotnet new -i Scissors.XafTemplates.Module.CSharp
 dotnet new -i Scissors.XafTemplates.Module.Win.CSharp
+dotnet new -i Scissors.XafTemplates.Win.CSharp
 ```
 
 ## Available templates
 
 - `dotnet new xaf-module`: Creates an empty base module
 - `dotnet new xaf-win-module`: Creates an empty windows-forms module
+- `dotnet new xaf-win`: Creates an empty windows-forms application
 
 ## Samples & Demos
 
@@ -35,13 +37,21 @@ See [demos](./demos/README.md) for more details.
 #### BaseModule
 
 ```cmd
-dotnet new xaf-module -o Base -n Scissors.Modules.TokenEditor
+dotnet new xaf-module -o Base -n Acme.Modules.TokenEditor
 ```
 
 #### WindowsFormsModule
 
 ```cmd
-dotnet new xaf-win-module -o Win -n Scissors.Modules.TokenEditor
+dotnet new xaf-win-module -o Win -n Acme.Modules.TokenEditor
+```
+
+### Empty Applications
+
+#### WinApplication
+
+```cmd
+dotnet new xaf-win -o src -n Acme.DemoCenter
 ```
 
 ## Building & Development
@@ -88,7 +98,7 @@ First run `npm i` to install the dependencies for committing.
 
 To perform a change switch to a new branch (from `master`):
 
-`git checkout -b topic/featurename`
+`git checkout -b topic/featurename-issueid`
 
 Start you work. Commit often and in small chunks by running through the wizard.
 

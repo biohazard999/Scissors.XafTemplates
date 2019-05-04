@@ -12,13 +12,13 @@ REM Create an empty 'editors' module for the TokenEditor and cd into it
 mkdir TokenEditors && pushd TokenEditors
 
 REM Create the base module
-dotnet new xaf-module -o Base -n Scissors.Modules.TokenEditor
+dotnet new xaf-module -o Base -n Acme.Modules.TokenEditor
 REM Create the winforms module
-dotnet new xaf-win-module -o Win -n Scissors.Modules.TokenEditor
+dotnet new xaf-win-module -o Win -n Acme.Modules.TokenEditor
 
 pushd Win
 REM Add a reference from Win to Base
-dotnet add reference ..\Base\Scissors.Modules.TokenEditor.csproj
+dotnet add reference ..\Base\Acme.Modules.TokenEditor.csproj
 popd 
 
 REM Build and restore Base
