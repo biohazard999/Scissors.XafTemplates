@@ -26,7 +26,7 @@ REM Build and restore
 dotnet restore && dotnet build
 
 REM Start the application
-REM dotnet run DemoCenter.sln -p src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
+dotnet run DemoCenter.sln -p src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
 
 popd
 popd
