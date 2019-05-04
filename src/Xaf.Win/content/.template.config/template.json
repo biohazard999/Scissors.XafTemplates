@@ -9,5 +9,64 @@
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "Scissors.ModuleName"
+  "sourceName": "Scissors.ModuleName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    },
+    "modulename": {
+      "type": "generated",
+      "generator": "regex",
+      "datatype": "text",
+      "replaces": "ModuleName",
+      "parameters": {
+        "source": "name",
+        "action": "replace",
+        "steps": [
+          {
+            "regex": ".*\\.",
+            "replacement": ""
+          }
+        ]
+      }
+    },
+    "moduleRename": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "ValueAfterLastDot",
+      "fileRename": "ModuleName"
+    },
+    "target-framework": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "net462",
+      "replaces": "net462"
+    },
+    "dx-version": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "19.1.2",
+      "replaces": "18.2.7"
+    }
+  },
+  "forms": {
+    "ValueAfterLastDot": {
+      "identifier": "replace",
+      "pattern": "^.*\\.(?=[^\\.]+$)",
+      "replacement": ""
+    }
+  },
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [{ "text": "Run 'dotnet restore'" }],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
 }

@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Xpo;
@@ -10,6 +12,7 @@ namespace Scissors.ModuleName.Win
         {
             CustomizeLanguagesList += ModuleNameWindowsFormsApplication_CustomizeLanguagesList;
             DatabaseVersionMismatch += ModuleNameWindowsFormsApplication_DatabaseVersionMismatch;
+            ExecuteStartupLogicBeforeClosingLogonWindow = true;
         }
 
         protected override void CreateDefaultObjectSpaceProvider(CreateCustomObjectSpaceProviderEventArgs args)

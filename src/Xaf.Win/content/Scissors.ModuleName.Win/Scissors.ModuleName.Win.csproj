@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>WinExe</OutputType>
     <TargetFramework>net462</TargetFramework>
   </PropertyGroup>
 
@@ -16,7 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System.Windows.Forms" Private="True" />    
+    <Reference Include="System.Windows.Forms" Private="False" />    
+    <Reference Include="System.Configuration" Private="False" />    
   </ItemGroup>
 
 </Project>

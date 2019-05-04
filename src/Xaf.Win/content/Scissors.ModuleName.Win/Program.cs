@@ -2,9 +2,15 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Configuration;
+using DevExpress.XtraEditors;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win;
+using DevExpress.ExpressApp.SystemModule;
+using DevExpress.ExpressApp.Win.SystemModule;
+using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Xpo;
+using DevExpress.Persistent.Base;
 using Scissors.ModuleName.Win.Extentions;
 using Scissors.ModuleNameApp;
 using Scissors.ModuleNameApp.Win;
@@ -74,21 +80,21 @@ namespace Scissors.ModuleName.Win
             var app = new ModuleNameWindowsFormsApplication();
             using (app.Initialize())
             {
-                app.ApplicationName = "Scissors";
+                app.ApplicationName = "Scissors.ModuleName";
                 app.OptimizedControllersCreation = true;
                 app.RunSetupInNewThread = true;
 
                 app.UseOldTemplates = false;
                 app.UseLightStyle = true;
 
-                app.LinkNewObjectToParentImmediately = false;
-                app.ExecuteStartupLogicBeforeClosingLogonWindow = true;
-                app.CheckCompatibilityType
+                app.LinkNewObjectToParentImmediately = true;
+                app.CheckCompatibilityType = CheckCompatibilityType.ModuleInfo;
+                app.DatabaseUpdateMode
                     = System.Diagnostics.Debugger.IsAttached
                     ? DatabaseUpdateMode.UpdateDatabaseAlways
-                    : DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
+                    : DatabaseUpdateMode.UpdateOldDatabase;
 
-                app.Modules.AddRange(new[]
+                app.Modules.AddRange(new ModuleBase[]
                 {
                     new SystemModule(),
                     new SystemWindowsFormsModule(),
