@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Scissors.ModuleNameApp\Scissors.ModuleNameApp.csproj" />
-    <ProjectReference Include="..\Scissors.ModuleNameApp.Win\Scissors.ModuleNameApp.Win.csproj" />
+    <ProjectReference Include="..\Scissors.ModuleName.App\Scissors.ModuleName.App.csproj" />
+    <ProjectReference Include="..\Scissors.ModuleName.App.Win\Scissors.ModuleName.App.Win.csproj" />
   </ItemGroup>
 
   <ItemGroup>

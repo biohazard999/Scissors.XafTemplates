@@ -3,9 +3,9 @@ using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.Win.SystemModule;
-using Scissors.ModuleNameApp;
+using Scissors.ModuleName.App;
 
-namespace Scissors.ModuleNameApp.Win
+namespace Scissors.ModuleName.App.Win
 {
     public class ModuleNameAppWindowsFormsModule : ModuleBase
     {

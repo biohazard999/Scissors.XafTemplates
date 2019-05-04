@@ -18,15 +18,15 @@ REM Create a sln
 dotnet new sln
 
 REM Add projects to sln
-dotnet sln add src\Acme.DemoCenterApp\Acme.DemoCenterApp.csproj
-dotnet sln add src\Acme.DemoCenterApp.Win\Acme.DemoCenterApp.Win.csproj
+dotnet sln add src\Acme.DemoCenter.App\Acme.DemoCenter.App.csproj
+dotnet sln add src\Acme.DemoCenter.App.Win\Acme.DemoCenter.App.Win.csproj
 dotnet sln add src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
 
 REM Build and restore 
 dotnet restore && dotnet build
 
 REM Start the application
-dotnet run DemoCenter.sln -p src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
+REM dotnet run DemoCenter.sln -p src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
 
 popd
 popd

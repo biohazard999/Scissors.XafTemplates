@@ -12,8 +12,8 @@ using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.Base;
 using Scissors.ModuleName.Win.Extentions;
-using Scissors.ModuleNameApp;
-using Scissors.ModuleNameApp.Win;
+using Scissors.ModuleName.App;
+using Scissors.ModuleName.App.Win;
 
 namespace Scissors.ModuleName.Win
 {

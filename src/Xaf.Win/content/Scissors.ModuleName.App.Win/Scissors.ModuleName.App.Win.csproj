@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../Scissors.ModuleNameApp/Scissors.ModuleNameApp.csproj" />
+    <ProjectReference Include="../Scissors.ModuleName.App/Scissors.ModuleName.App.csproj" />
   </ItemGroup>
 
 </Project>

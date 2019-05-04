@@ -2,7 +2,7 @@
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.SystemModule;
 
-namespace Scissors.ModuleNameApp
+namespace Scissors.ModuleName.App
 {
     public class ModuleNameAppModule : ModuleBase
     {
