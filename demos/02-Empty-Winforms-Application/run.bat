@@ -25,6 +25,9 @@ dotnet sln add src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
 REM Build and restore 
 dotnet restore && dotnet build
 
+REM Start the application
+dotnet run DemoCenter.sln -p src\Acme.DemoCenter.Win\Acme.DemoCenter.Win.csproj
+
 popd
 popd
 echo Done
