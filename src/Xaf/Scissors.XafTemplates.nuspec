@@ -7,6 +7,7 @@
       Metapackage for all Scissors.XafTemplates.*
     </description>
     <authors>Manuel Grundner</authors>    
+    <iconUrl>https://blog.delegate.at/img/favicon.ico</iconUrl>
     <dependencies>
       <dependency id="Scissors.XafTemplates.Module.CSharp" version="$version$" />
       <dependency id="Scissors.XafTemplates.Module.Win.CSharp" version="$version$" />
