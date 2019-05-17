@@ -107,3 +107,5 @@ Start you work. Commit often and in small chunks by running through the wizard.
 - `git push`
 
 Push your work and perform a [pull-request](https://github.com/biohazard999/Scissors.XafTemplates/pulls).
+
+> If you find interesting what I'm doing, consider becoming a [patreon](//www.patreon.com/biohaz999) or [contact me](//www.delegate.at/) for training, development or consultancy.
